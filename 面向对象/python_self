@@ -1,0 +1,49 @@
+'''
+self和对象指向同一个内存地址 可以认为self就是对象的引用
+所谓的self，可以理解为对象自己，某个对象调用其方法时，python
+解释器会把这个对象作为第一个参数传递给self
+'''
+
+
+class Person:
+    '''
+    定义类
+    '''
+    def __init__(self,pro='计算机科学与技术'):
+        '''
+
+        :param pro:专业
+        '''
+        self.pro = pro
+        pass
+
+    def eat(self,name,food):
+        '''
+        实例方法
+        :return:
+        '''
+        # print('self的id:{}'.format(id(self)))
+        # print(self)
+        print('%s喜欢吃%s 修的专业是%s'%(name,food,self.pro))
+        pass
+    pass
+
+
+cc = Person('计算机科学与技术')
+cc.eat('小王', '榴莲')
+print('cc对象的id:{}'.format(id(cc)))
+
+
+'''
+小结
+1.self只有在类中定义 实例方法时才有意义
+在调用时候不必传入相应参数，而是由解释器自动 去指向
+2.self的名称可以更改，可以定义成其它的名字，只是约定俗成的定义成 self
+3.self 指的是类实例对象本身
+'''
+
+
+
+
+
+
