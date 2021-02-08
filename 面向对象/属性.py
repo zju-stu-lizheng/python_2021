@@ -14,6 +14,14 @@ class Student:
 
 lm = Student(18)
 print(lm.name, lm.age)
+lm.name = '小华'
+print(lm.name)
+
+Student.name = '李易峰'    # 通过类对象去修改数据 可以修改的
+print('--------xh的数据---------')
+xh = Student(28)
+print(xh.name)
+print(xh.age)
 print('---------通过类对象 访问name ---------')
 print(Student.name)
 # print(Student.age)
