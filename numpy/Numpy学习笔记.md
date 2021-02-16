@@ -5,15 +5,12 @@
    * `ndarray`：是存储单一数据类型的多维数组
    * `ufunc`：是一种能够对数组进行处理的特殊函数
 
-[TOC]
-
 ## 一、ndarray
 
 ### 1. ndarray 对象的内存结构
 
 1. `ndarray`对象在内存中的结构如下：
 
-![image-20210215092409608](C:\Users\1\AppData\Roaming\Typora\typora-user-images\image-20210215092409608.png)
 
 ```python
 import numpy as np
@@ -75,14 +72,10 @@ True
 #### 1.3 view
 
 1. 我们可以通过 ndarray.view() ⽅法，从同⼀块数据区创建不同的 dtype 数组。即使⽤不同的数值类型查看同⼀段内存中的⼆进制数据。它们使⽤的是同⼀块内存。 
-
-![image-20210215193934746](C:\Users\1\AppData\Roaming\Typora\typora-user-images\image-20210215193934746.png)
-
 #### 1.4 strides
 
 1. 我们可以直接修改 `ndarray` 对象的 strides 属性。此时修改的是原始数组。
 
-![image-20210215204037454](C:\Users\1\AppData\Roaming\Typora\typora-user-images\image-20210215204037454.png)
 
 2. 你可以使⽤ `np.lib.stride_tricks.as_stride()` 函数创建⼀个不同 strides 的视图。
 
@@ -93,7 +86,6 @@ True
    * 视图和浅拷⻉：不同的` ndarray `可能共享相同的数据存储区。如` ndarray.view() `⽅法创建⼀个新的`ndarray` 但是与旧 `ndarray` 共享相同的数据存储区。新创建的那个数组称作视图数组。 
    * 深拷⻉： `ndarray.copy()` 操作会返回⼀个完全的拷⻉，不仅拷⻉` ndarray `也拷⻉数据存储区。
 
-![image-20210215205013780](C:\Users\1\AppData\Roaming\Typora\typora-user-images\image-20210215205013780.png)
 
 ### 2. 数组的创建
 
